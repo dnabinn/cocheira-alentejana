@@ -493,6 +493,46 @@
     </iframe>
   </div>
 
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de fotos">
+    <button class="lightbox__close" id="lbClose" aria-label="Fechar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Seguinte">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+    </button>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" id="lbImg" src="" alt="" />
+      <p class="lightbox__caption" id="lbCaption"></p>
+    </div>
+    <span class="lightbox__counter" id="lbCounter"></span>
+  </div>
+
+  <!-- ===================== FLOATING RESERVATION BUTTON ===================== -->
+  <div class="fab" id="fab">
+    <div class="fab__options">
+      <a href="https://reservation.umai.io/gl/widget/cocheira-alentejana" target="_blank" rel="noopener noreferrer" class="fab__option" aria-label="Reservar online">
+        <span class="fab__option-label">Reservar Online</span>
+        <span class="fab__option-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        </span>
+      </a>
+      <a href="tel:+351213464868" class="fab__option" aria-label="Ligar para o restaurante">
+        <span class="fab__option-label">21 346 4868</span>
+        <span class="fab__option-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </span>
+      </a>
+    </div>
+    <button class="fab__main" id="fabToggle" aria-label="Reservar mesa" aria-expanded="false">
+      <svg class="fab__icon-default" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>
+      <svg class="fab__icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </div>
+
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -568,6 +608,59 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
+
+    // ── LIGHTBOX ──────────────────────────────────────────
+    const lightbox   = document.getElementById('lightbox');
+    const lbImg      = document.getElementById('lbImg');
+    const lbCaption  = document.getElementById('lbCaption');
+    const lbCounter  = document.getElementById('lbCounter');
+    const galleryItems = [...document.querySelectorAll('.gallery__item')];
+    let lbIndex = 0;
+
+    function lbOpen(index) {
+      lbIndex = (index + galleryItems.length) % galleryItems.length;
+      const item    = galleryItems[lbIndex];
+      const img     = item.querySelector('img');
+      const caption = item.querySelector('.gallery__caption');
+      lbImg.src     = img.src;
+      lbImg.alt     = img.alt;
+      lbCaption.textContent = caption ? caption.textContent.trim() : '';
+      lbCounter.textContent = `${lbIndex + 1} / ${galleryItems.length}`;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function lbClose() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => { lbImg.src = ''; }, 300);
+    }
+
+    galleryItems.forEach((item, i) => item.addEventListener('click', () => lbOpen(i)));
+    document.getElementById('lbClose').addEventListener('click', lbClose);
+    document.getElementById('lbPrev').addEventListener('click', () => lbOpen(lbIndex - 1));
+    document.getElementById('lbNext').addEventListener('click', () => lbOpen(lbIndex + 1));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lbClose(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')      lbClose();
+      if (e.key === 'ArrowLeft')   lbOpen(lbIndex - 1);
+      if (e.key === 'ArrowRight')  lbOpen(lbIndex + 1);
+    });
+
+    // ── FLOATING RESERVATION BUTTON ──────────────────────
+    const fab       = document.getElementById('fab');
+    const fabToggle = document.getElementById('fabToggle');
+    fabToggle.addEventListener('click', () => {
+      const isOpen = fab.classList.toggle('open');
+      fabToggle.setAttribute('aria-expanded', isOpen);
+    });
+    document.addEventListener('click', e => {
+      if (!fab.contains(e.target)) {
+        fab.classList.remove('open');
+        fabToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   </script>
 
