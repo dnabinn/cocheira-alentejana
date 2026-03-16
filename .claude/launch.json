@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Static Server (Python)",
+      "runtimeExecutable": "C:/Users/DNABINN/AppData/Local/Programs/Python/Python312/python.exe",
+      "runtimeArgs": ["-m", "http.server"],
+      "port": 8000,
+      "autoPort": true
+    }
+  ]
+}
