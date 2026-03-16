@@ -473,13 +473,16 @@ ul { list-style: none; }
 }
 .menu__item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);
   border-right: 1px solid var(--border);
   transition: background var(--transition);
+}
+.menu__item-info {
+  text-align: center;
 }
 .menu__item:nth-child(even) { border-right: none; }
 .menu__item:hover { background: rgba(139,58,24,0.04); }
