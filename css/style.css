@@ -473,7 +473,7 @@ ul { list-style: none; }
 }
 .menu__item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
@@ -482,7 +482,8 @@ ul { list-style: none; }
   transition: background var(--transition);
 }
 .menu__item-info {
-  text-align: center;
+  text-align: left;
+  flex: 1;
 }
 .menu__item:nth-child(even) { border-right: none; }
 .menu__item:hover { background: rgba(139,58,24,0.04); }
@@ -527,6 +528,13 @@ ul { list-style: none; }
   border-radius: 2px;
   margin-left: 6px;
   vertical-align: middle;
+}
+.menu__qty {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 4px;
 }
 .menu__note {
   margin-top: 2rem;

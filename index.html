@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 <body>
 
@@ -157,40 +157,132 @@
       <p class="section__subtitle">Sabores autênticos do Alentejo preparados com ingredientes frescos e tradição.</p>
 
       <div class="menu__tabs">
-        <button class="menu__tab active" data-tab="entradas">Entradas</button>
+        <button class="menu__tab active" data-tab="couvert">Couvert</button>
+        <button class="menu__tab" data-tab="entradas">Entradas</button>
         <button class="menu__tab" data-tab="sopas">Sopas</button>
-        <button class="menu__tab" data-tab="pratos">Pratos</button>
+        <button class="menu__tab" data-tab="saladas">Saladas</button>
+        <button class="menu__tab" data-tab="peixe">Peixe</button>
+        <button class="menu__tab" data-tab="carne">Carne</button>
+        <button class="menu__tab" data-tab="vegetariano">Vegetariano</button>
+        <button class="menu__tab" data-tab="massas">Massas</button>
         <button class="menu__tab" data-tab="sobremesas">Sobremesas</button>
-        <button class="menu__tab" data-tab="bebidas">Bebidas</button>
       </div>
 
       <div class="menu__panels">
-        <!-- ENTRADAS -->
-        <div class="menu__panel active" id="tab-entradas">
+
+        <!-- COUVERT -->
+        <div class="menu__panel active" id="tab-couvert">
           <div class="menu__grid">
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Pão Alentejano com Azeite</h4>
-                <p>Pão artesanal com azeite extra virgem e sal grosso</p>
+                <h4>Cesto de Pão (pequeno)</h4>
+                <p>Small bread basket · Petite corbeille à pain</p>
               </div>
+              <span class="menu__price">€1,90</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Cesto de Pão (grande)</h4>
+                <p>Big bread basket · Grand corbeille à pain</p>
+              </div>
+              <span class="menu__price">€2,90</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Queijo de Azeitão</h4>
+                <p>Azeitão soft-ripened cheese · Fromage à pâte molle</p>
+              </div>
+              <span class="menu__price">€4,90</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Queijo de Borba</h4>
+                <p>Borba dry cheese · Fromage sec</p>
+              </div>
+              <span class="menu__price">€2,90</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Azeitonas</h4>
+                <p>Olives</p>
+              </div>
+              <span class="menu__price">€2,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Manteiga</h4>
+                <p>Butter · Beurre</p>
+              </div>
+              <span class="menu__price">€1,40</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENTRADAS -->
+        <div class="menu__panel" id="tab-entradas">
+          <div class="menu__grid">
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Amêijoas à Bulhão Pato</h4>
+                <p>Portuguese style clams · Palourdes à la portugaise</p>
+              </div>
+              <span class="menu__price">€15,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Ovos Mexidos com Farinheira</h4>
+                <p>Scrambled eggs with typical Portuguese sausage · Œufs brouillés avec saucisse portugaise</p>
+              </div>
+              <span class="menu__price">€12,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
                 <h4>Chouriço Assado</h4>
-                <p>Chouriço alentejano assado na brasa</p>
+                <p>Roasted chorizo · Chorizo rôti</p>
               </div>
+              <span class="menu__price">€9,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Queijo de Ovelha</h4>
-                <p>Queijo curado da região alentejana</p>
+                <h4>Pastéis de Bacalhau com Salada <span class="menu__qty">2 un.</span></h4>
+                <p>Codfish pastry with salad · Accras de morue avec salade</p>
               </div>
+              <span class="menu__price">€7,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Azeitonas Temperadas</h4>
-                <p>Azeitonas da região com ervas aromáticas</p>
+                <h4>Tábua de Queijos</h4>
+                <p>Cheese board · Plateau à fromage</p>
               </div>
+              <span class="menu__price">€12,50</span>
+            </div>
+            <div class="menu__item menu__item--featured">
+              <div class="menu__item-info">
+                <h4>Mista de Tapas à Portuguesa <span class="tag">Especial</span></h4>
+                <p>Chorizo, 3 types of cheese, bread &amp; olives · Chorizo, 3 fromages, pain &amp; olives</p>
+              </div>
+              <span class="menu__price">€24,90</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Gambas Grelhadas</h4>
+                <p>Grilled prawns · Crevettes grillées</p>
+              </div>
+              <span class="menu__price">€18,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada de Polvo</h4>
+                <p>Octopus salad · Salade de poulpe</p>
+              </div>
+              <span class="menu__price">€10,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Calamares</h4>
+                <p>Calamari · Calamars</p>
+              </div>
+              <span class="menu__price">€11,50</span>
             </div>
           </div>
         </div>
@@ -198,65 +290,350 @@
         <!-- SOPAS -->
         <div class="menu__panel" id="tab-sopas">
           <div class="menu__grid">
-            <div class="menu__item">
+            <div class="menu__item menu__item--featured">
               <div class="menu__item-info">
-                <h4>Açorda Alentejana</h4>
-                <p>Sopa de pão com alho, coentros e ovo escalfado</p>
+                <h4>Sopa Alentejana <span class="tag">Especial</span></h4>
+                <p>Slice of Alentejo bread, poached egg, garlic, olive oil &amp; coriander · Tranche de pain, œuf poché, ail, huile d'olive &amp; coriandre</p>
               </div>
+              <span class="menu__price">€5,00</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Sopa de Cação</h4>
-                <p>Sopa tradicional de peixe com pão alentejano</p>
+                <h4>Sopa de Tomate</h4>
+                <p>Tomato soup · Soupe à la tomate</p>
               </div>
+              <span class="menu__price">€4,00</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Sopa da Pedra</h4>
-                <p>Sopa encorpada com feijão, chouriço e enchidos</p>
+                <h4>Sopa do Dia</h4>
+                <p>Soup of the day · Soupe du jour</p>
               </div>
+              <span class="menu__price">€4,00</span>
             </div>
           </div>
         </div>
 
-        <!-- PRATOS -->
-        <div class="menu__panel" id="tab-pratos">
+        <!-- SALADAS -->
+        <div class="menu__panel" id="tab-saladas">
+          <div class="menu__grid">
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada Mista</h4>
+                <p>Lettuce, tomato, onion, carrot &amp; corn · Laitue, tomate, oignon, carotte &amp; maïs</p>
+              </div>
+              <span class="menu__price">€8,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada de Mozzarella</h4>
+                <p>Tomato, mozzarella with green pesto · Tomate, mozzarella au pesto vert</p>
+              </div>
+              <span class="menu__price">€8,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada de Frango</h4>
+                <p>Chicken, lettuce, orange &amp; nuts · Poulet, laitue, orange &amp; noix</p>
+              </div>
+              <span class="menu__price">€11,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada Mediterrânica</h4>
+                <p>Lettuce, bacon, apple, croutons &amp; parmesan · Laitue, bacon, pomme, croûtons &amp; parmesan</p>
+              </div>
+              <span class="menu__price">€9,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada Tropical</h4>
+                <p>Lettuce, pineapple &amp; shrimp · Laitue, ananas &amp; crevette</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salada de Atum</h4>
+                <p>Tuna, lettuce, tomato &amp; boiled egg · Thon, laitue, tomate &amp; œuf dur</p>
+              </div>
+              <span class="menu__price">€12,50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PEIXE -->
+        <div class="menu__panel" id="tab-peixe">
+          <div class="menu__grid">
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Bacalhau à Brás com Salada</h4>
+                <p>Codfish with egg, shoestring potato, olives &amp; salad · Morue, œuf, pommes de terre paille, olives &amp; salade</p>
+              </div>
+              <span class="menu__price">€16,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Bacalhau Grelhado</h4>
+                <p>Grilled codfish with boiled potatoes &amp; vegetables · Morue grillée, pommes de terre bouillies &amp; légumes</p>
+              </div>
+              <span class="menu__price">€19,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Dourada Grelhada</h4>
+                <p>Grilled sea bream, boiled potatoes &amp; vegetables · Dorade grillée, pommes de terre &amp; légumes</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Dourada com Limão</h4>
+                <p>Sea bream with lemon, boiled potatoes &amp; vegetables · Dorade au citron, pommes de terre &amp; légumes</p>
+              </div>
+              <span class="menu__price">€15,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Robalinho Grelhado</h4>
+                <p>Grilled sea bass, boiled potatoes &amp; vegetables · Bar grillé, pommes de terre &amp; légumes</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Robalinho com Camarão</h4>
+                <p>Sea bass with prawn, boiled potatoes &amp; vegetables · Bar aux crevettes, pommes de terre &amp; légumes</p>
+              </div>
+              <span class="menu__price">€16,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Salmão Grelhado</h4>
+                <p>Grilled salmon with boiled potatoes &amp; vegetables · Saumon grillé, pommes de terre &amp; légumes</p>
+              </div>
+              <span class="menu__price">€16,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Lulas Grelhadas</h4>
+                <p>Grilled squids with boiled potatoes &amp; vegetables · Calamars grillés, pommes de terre &amp; légumes</p>
+              </div>
+              <span class="menu__price">€16,50</span>
+            </div>
+            <div class="menu__item menu__item--featured">
+              <div class="menu__item-info">
+                <h4>Polvo "À Lagareiro" <span class="tag">Especial</span></h4>
+                <p>Octopus à lagareiro with boiled potatoes · Pieuvre à lagareiro, pommes de terre bouillies</p>
+              </div>
+              <span class="menu__price">€21,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Sardinhas Assadas</h4>
+                <p>Grilled sardines with boiled potatoes &amp; salad · Sardines grillées, pommes de terre &amp; salade</p>
+              </div>
+              <span class="menu__price">€12,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Arroz de Polvo</h4>
+                <p>Octopus rice · Riz au poulpe</p>
+              </div>
+              <span class="menu__price">€15,50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARNE -->
+        <div class="menu__panel" id="tab-carne">
           <div class="menu__grid">
             <div class="menu__item menu__item--featured">
               <div class="menu__item-info">
-                <h4>Plumas de Porco Preto <span class="tag">Especialidade</span></h4>
-                <p>Plumas de porco preto alentejano grelhadas</p>
+                <h4>Carne de Porco à Alentejana <span class="tag">Especial</span></h4>
+                <p>Fried pork with clams &amp; french fries · Porc frit aux palourdes et frites</p>
               </div>
+              <span class="menu__price">€15,50</span>
             </div>
             <div class="menu__item menu__item--featured">
               <div class="menu__item-info">
-                <h4>Lombo de Porco com Queijo de Cabra e Mel <span class="tag">Especialidade</span></h4>
-                <p>Lombo de porco grelhado com queijo de cabra derretido e mel</p>
+                <h4>Lombinhos de Porco com Queijo de Cabra e Mel <span class="tag">Especial</span></h4>
+                <p>Grilled pork steak with goat cheese, honey, rice, fries &amp; salad</p>
               </div>
-            </div>
-            <div class="menu__item menu__item--featured">
-              <div class="menu__item-info">
-                <h4>Coelho à Avó Rosa <span class="tag">Especialidade</span></h4>
-                <p>Receita tradicional de coelho estufado ao estilo alentejano</p>
-              </div>
-            </div>
-            <div class="menu__item menu__item--featured">
-              <div class="menu__item-info">
-                <h4>Açorda de Gambas <span class="tag">Especialidade</span></h4>
-                <p>Açorda tradicional com gambas salteadas e coentros frescos</p>
-              </div>
+              <span class="menu__price">€16,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Carne de Porco à Alentejana</h4>
-                <p>Porco marinado com ameijoas, pimentos e coentros</p>
+                <h4>Migas com Carne de Porco à Alentejana</h4>
+                <p>Fried pork with breadcrumbs · Porc frit avec pain émietté frit</p>
               </div>
+              <span class="menu__price">€15,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Ensopado de Borrego</h4>
-                <p>Borrego estufado com pão alentejano</p>
+                <h4>Lagartos de Porco Preto Grelhados</h4>
+                <p>Grilled black pork with rice, fries &amp; salad · Lézards de porc noir, riz, frites &amp; salade</p>
               </div>
+              <span class="menu__price">€16,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Secretos de Porco Preto na Grelha</h4>
+                <p>Grilled black pork steak with rice, fries &amp; salad · Steak de porc noir, riz, frites &amp; salade</p>
+              </div>
+              <span class="menu__price">€16,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Lombo de Porco Frito</h4>
+                <p>Fried pork loin with fries &amp; salad · Longe de porc frite, frites &amp; salade</p>
+              </div>
+              <span class="menu__price">€16,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Bife da Vazia na Grelha</h4>
+                <p>Grilled rump steak with fries, rice &amp; salad · Rumsteck grillé, frites, riz &amp; salade</p>
+              </div>
+              <span class="menu__price">€19,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Escalopes de Vitela com Molho de 3 Queijos</h4>
+                <p>Veal scallops with 3 cheeses sauce &amp; fries · Escalopes de veau, sauce aux 3 fromages &amp; frites</p>
+              </div>
+              <span class="menu__price">€20,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Peito de Frango</h4>
+                <p>Chicken breast with fries &amp; salad · Blanc de poulet, frites &amp; salade</p>
+              </div>
+              <span class="menu__price">€15,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Frango Frito com Amêijoas</h4>
+                <p>Fried chicken with clams &amp; fries · Poulet frit aux palourdes &amp; frites</p>
+              </div>
+              <span class="menu__price">€14,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Frango Piri Piri</h4>
+                <p>Grilled spicy chicken with fries &amp; salad · Poulet épicé grillé, frites &amp; salade</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Entremeada Grelhada</h4>
+                <p>Grilled 3-layered pork with fries &amp; salad · Porc grillé en 3 couches, frites &amp; salade</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Costeletas de Porco</h4>
+                <p>Grilled pork chops with fries &amp; rice · Côtelettes de porc, frites &amp; riz</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VEGETARIANO -->
+        <div class="menu__panel" id="tab-vegetariano">
+          <div class="menu__grid">
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Arroz Vegetariano</h4>
+                <p>Rice with vegetables &amp; beans · Riz aux légumes &amp; haricots</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Esparguete Vegetariano</h4>
+                <p>Spaghetti with beans, broccoli &amp; mushrooms · Spaghetti, haricots, brocoli &amp; champignons</p>
+              </div>
+              <span class="menu__price">€13,50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MASSAS -->
+        <div class="menu__panel" id="tab-massas">
+          <div class="menu__grid">
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Spaghetti alla Bolognese</h4>
+                <p>Spaghetti with meat bolognese · Spaghetti bolognaise</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Spaghetti alla Carbonara</h4>
+                <p>Bacon, egg, cream &amp; parmesan · Bacon, œufs, crème &amp; parmesan</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Spaghetti al Paese</h4>
+                <p>Chicken, onion, garlic &amp; fresh tomato · Poulet, oignon, ail &amp; tomate fraîche</p>
+              </div>
+              <span class="menu__price">€13,25</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Spaghetti Gamberoni</h4>
+                <p>Shrimp, mushrooms &amp; ginger · Crevettes, champignons &amp; gingembre</p>
+              </div>
+              <span class="menu__price">€14,00</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Spaghetti Chilli</h4>
+                <p>Garlic, chilli &amp; tomato sauce · Ail, chilli &amp; sauce tomate</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Spaghetti alla Puttanesca</h4>
+                <p>Tomato, anchovies, olives, garlic, onion &amp; capers · Tomate, anchois, olives, ail, oignon &amp; câpres</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Penne Gamberoni</h4>
+                <p>Prawns, tomato, chilli &amp; coriander · Crevettes, tomate, chilli &amp; coriandre</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Penne Poletto e Funghi</h4>
+                <p>Chicken, smoked ham, cream &amp; mushrooms · Poulet, jambon fumé, crème &amp; champignons</p>
+              </div>
+              <span class="menu__price">€14,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Tagliatelle Funghi</h4>
+                <p>Mushrooms &amp; cream · Champignons &amp; crème</p>
+              </div>
+              <span class="menu__price">€11,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Tagliatelle al Salmone</h4>
+                <p>Fresh salmon, tomato sauce &amp; cream · Saumon frais, sauce tomate &amp; crème</p>
+              </div>
+              <span class="menu__price">€13,00</span>
             </div>
           </div>
         </div>
@@ -264,71 +641,52 @@
         <!-- SOBREMESAS -->
         <div class="menu__panel" id="tab-sobremesas">
           <div class="menu__grid">
-            <div class="menu__item">
+            <div class="menu__item menu__item--featured">
               <div class="menu__item-info">
-                <h4>Sericaia com Ameixas de Elvas</h4>
-                <p>Pudim alentejano tradicional com ameixas de Elvas</p>
+                <h4>Sericaia com Ameixas d'Elvas <span class="tag">Especial</span></h4>
+                <p>Traditional Alentejo sweet with eggs, flour, sugar, milk &amp; cinnamon, served with Elva plums</p>
               </div>
+              <span class="menu__price">€8,50</span>
+            </div>
+            <div class="menu__item menu__item--featured">
+              <div class="menu__item-info">
+                <h4>Pão de Rala <span class="tag">Especial</span></h4>
+                <p>Conventual dessert from Évora with egg yolks, sugar, lemon zest, almonds &amp; pumpkin gila</p>
+              </div>
+              <span class="menu__price">€8,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Toucinho do Céu</h4>
-                <p>Doce conventual alentejano de amêndoa</p>
+                <h4>Dame Blanche</h4>
+                <p>With chocolate sauce &amp; whipped cream · Sauce chocolat &amp; crème fouettée</p>
               </div>
+              <span class="menu__price">€6,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Leite-Creme</h4>
-                <p>Leite-creme queimado na hora</p>
+                <h4>Crepe com Caramelo e Gelado de Baunilha</h4>
+                <p>Crepe with caramel &amp; vanilla ice cream · Crêpe au caramel &amp; crème glacée à la vanille</p>
               </div>
+              <span class="menu__price">€9,50</span>
             </div>
             <div class="menu__item">
               <div class="menu__item-info">
-                <h4>Mousse de Chocolate</h4>
-                <p>Mousse de chocolate negro artesanal</p>
+                <h4>Gelado de Caramelo</h4>
+                <p>Caramel ice cream · Glace au caramel</p>
               </div>
+              <span class="menu__price">€6,50</span>
+            </div>
+            <div class="menu__item">
+              <div class="menu__item-info">
+                <h4>Crème Brûlée</h4>
+                <p>Cream, eggs, sugar &amp; vanilla with sugar crust · Crème, œufs, sucre &amp; vanille, croûte de sucre</p>
+              </div>
+              <span class="menu__price">€5,50</span>
             </div>
           </div>
         </div>
 
-        <!-- BEBIDAS -->
-        <div class="menu__panel" id="tab-bebidas">
-          <div class="menu__grid">
-            <div class="menu__item">
-              <div class="menu__item-info">
-                <h4>Vinho da Casa (tinto / branco / rosé)</h4>
-                <p>Vinhos portugueses selecionados</p>
-              </div>
-            </div>
-            <div class="menu__item">
-              <div class="menu__item-info">
-                <h4>Garrafeira de Vinhos Alentejanos</h4>
-                <p>Seleção de vinhos da região do Alentejo</p>
-              </div>
-            </div>
-            <div class="menu__item">
-              <div class="menu__item-info">
-                <h4>Água</h4>
-                <p>Com ou sem gás</p>
-              </div>
-            </div>
-            <div class="menu__item">
-              <div class="menu__item-info">
-                <h4>Refrigerantes</h4>
-                <p>Coca-Cola, sumol, sumos naturais</p>
-              </div>
-            </div>
-            <div class="menu__item">
-              <div class="menu__item-info">
-                <h4>Café / Espresso</h4>
-                <p>Café português de torra lenta</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <p class="menu__note">* Os preços e disponibilidade dos pratos podem variar. Consulte a ementa do dia no restaurante.</p>
     </div>
   </section>
 
